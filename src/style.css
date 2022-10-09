@@ -2,10 +2,24 @@ h1,
 p {
   font-family: Lato;
 }
-a {
-  padding: 10px 20px;
+html,
+body {
+  max-height: 100vh;
+  overflow: hidden;
 }
-
+body {
+  color: #ddd;
+  background: #888;
+}
+#main {
+  border-radius: 10px;
+  background: #333;
+  height: 95vh;
+  display: block;
+  width: 70%;
+  margin-left: 15%;
+  padding: 10px 3%;
+}
 .header {
   float: left;
   height: 100%;
