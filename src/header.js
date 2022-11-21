@@ -6,7 +6,10 @@ export default class HD extends React.Component {
     this.clickHeader = this.clickHeader.bind(this);
   }
   clickHeader(this, title) {
-    console.log(title);
+    document.querySelectorAll('.content.show').forEach(function(v) {
+      v.classList.remove('show');
+    });
+    document.getElementById(title + 'Div').classList.add('show');
   }
   render() {
     const list = this.props.value.map((item) => (
