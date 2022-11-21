@@ -1,20 +1,20 @@
 import React from 'react';
 
-export default class Profile extends React.Component {
+export default class Content extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    const content = this.props.value.map((item) => (
+    const contents = this.props.value.map((item) => (
       <div
-        id="{item.title}Div"
-        key="{item.title}Div"
-        className="conetntDiv {item.title}Div content show"
+        id={item.title + 'Div'}
+        key={item.title + 'Div'}
+        className="contentDiv {item.title}Div content"
       >
         <h2>{item.title}</h2>
         <p>{item.content}</p>
       </div>
     ));
-    return <div id="content">{content}</div>;
+    return <div id="content">{contents}</div>;
   }
 }
