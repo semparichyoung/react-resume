@@ -7,11 +7,11 @@ export default class Content extends React.Component {
   render() {
     const contents = this.props.value.map((item) => (
       <div
-        id={item.title + 'Div'}
-        key={item.title + 'Div'}
+        id={item.title.ENG + 'Div'}
+        key={item.title.ENG + 'Div'}
         className="contentDiv {item.title}Div content"
       >
-        <h2>{item.title}</h2>
+        <h2>{item.title.ENG}</h2>
         <p>{item.content}</p>
       </div>
     ));

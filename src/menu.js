@@ -23,11 +23,11 @@ export default class Menu extends React.Component {
   render() {
     const list = this.props.value.map((item) => (
       <a
-        id={'header' + item.title + 'Btn'}
-        ref={item.title}
-        key={'header' + item.title + 'Btn'}
+        id={'header' + item.title.ENG + 'Btn'}
+        ref={item.title.ENG}
+        key={'header' + item.title.ENG + 'Btn'}
         className="button"
-        onClick={this.clickHeader.bind(this, item.title)}
+        onClick={this.clickHeader.bind(this, item.title.ENG)}
       >
         <Lang v={item.title}/>
       </a>

@@ -6,25 +6,17 @@ export default class lang extends React.Component {
   }
   render() {
     let text = {};
-    console.log(this.props.v);
-    return 'test';
     if (typeof this.props.v == 'string') {
       text = {
         ENG: this.props.v,
         CHT: this.props.v,
       };
-    } else if (typeof this.props.v == 'array') {
+    } else if (typeof this.props.v == 'object') {
       text = this.props.v;
     }
-    let cont = [];
-    for (let lang in text) {
-      cont = (
-        <span>
-          <span lang={lang}>{text[lang]}</span>
-          <span lang={lang}>{text[lang]}</span>
-        </span>
-      );
-    }
+    let cont = Object.keys(text).map((lang) => (
+      <span lang={lang}>{text[lang]}</span>
+    ));
     return cont;
   }
 }

@@ -13,3 +13,10 @@
 #switchLang {
   cursor: pointer;
 }
+
+#main[lang='ENG'] #ENG {
+  color: #a50;
+}
+#main[lang='CHT'] #CHT {
+  color: #a50;
+}
