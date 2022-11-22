@@ -10,6 +10,11 @@ export default class HD extends React.Component {
       v.classList.remove('show');
     });
     document.getElementById(title + 'Div').classList.add('show');
+
+    document.querySelectorAll('.button.active').forEach(function(v) {
+      v.classList.remove('active');
+    });
+    document.getElementById('header' + title + 'Btn').classList.add('active');
   }
   render() {
     const list = this.props.value.map((item) => (
