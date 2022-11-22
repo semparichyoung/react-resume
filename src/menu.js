@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class HD extends React.Component {
+export default class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.clickHeader = this.clickHeader.bind(this);
@@ -15,6 +15,9 @@ export default class HD extends React.Component {
       v.classList.remove('active');
     });
     document.getElementById('header' + title + 'Btn').classList.add('active');
+  }
+  componentDidMount() {
+    document.getElementById('headerProfileBtn').click();
   }
   render() {
     const list = this.props.value.map((item) => (
