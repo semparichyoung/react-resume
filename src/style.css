@@ -19,6 +19,15 @@ body {
   color: #ddd;
   background: #888;
 }
+span[lang] {
+  display: none;
+}
+#main[lang='ENG'] span[lang='ENG'] {
+  display: inline-block;
+}
+#main[lang='CHT'] span[lang='CHT'] {
+  display: inline-block;
+}
 #main {
   border-radius: 10px;
   background: #333;

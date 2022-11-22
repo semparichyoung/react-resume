@@ -1,4 +1,5 @@
 import React from 'react';
+import Lang from './lang.js';
 
 export default class Menu extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export default class Menu extends React.Component {
         className="button"
         onClick={this.clickHeader.bind(this, item.title)}
       >
-        {item.title}
+        <Lang v={item.title}/>
       </a>
     ));
     return <div className="header">{list}</div>;
